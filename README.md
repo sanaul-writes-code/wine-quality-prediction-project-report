@@ -1,10 +1,10 @@
-# Software:
+# Software
 You will need to use OverLeaf or other LaTex editior.
 
-- Create a free account on OverLeaf  
-- Download the zip file in the repository, this is the source file for the project report  
-- In OverLeaf, add this zip file as the source for a new project  
-- You can now view the current state of the project report and make changes
+1. Create a free account on OverLeaf  
+2. Download the zip file in the repository, this is the source file for the project report  
+3. In OverLeaf, add this zip file as the source for a new project  
+4. You can now view the current state of the project report and make changes
 
 # Contributing Guidelines
 1. Fork the repository
