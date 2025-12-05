@@ -19,7 +19,7 @@ You will need to use OverLeaf or other LaTex editior.
 
 - [x] chapters/01_introduction
 - [x] chapters/02_literature
-- [ ] chapters/03_methodology
+- [x] chapters/03_methodology
 - [ ] chapters/04_results
 - [ ] chapters/05_discussion
-- [ ] chapters/06_conclusions (In progress...)
+- [x] chapters/06_conclusions
