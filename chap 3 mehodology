@@ -1,0 +1,107 @@
+
+\chapter{Methodology}
+\label{ch:method} % Label for method chapter
+
+\chapter{Methodology}
+
+This chapter describes the methodological approach adopted to investigate whether wine
+quality can be predicted from measurable physicochemical properties. The methodology
+aligns with the application-type structure outlined in the project report template
+and encompasses data preparation, modelling strategies, and experimental design.
+
+\section{Data Preparation}
+
+The dataset used in this project is the UCI Wine Quality dataset, which contains
+1,599 red wine samples and 4,898 white wine samples. Each instance includes
+eleven physicochemical attributes (such as alcohol, density, sulphates, and pH)
+and a quality score ranging from 0 to 10, based on human sensory evaluation.
+
+Initial exploratory data analysis confirmed that the dataset contained no missing values.
+Feature distributions were examined using histograms and box plots to identify unusual
+patterns and potential outliers. Correlation heatmaps were generated to visualize levels
+of association between each physicochemical feature and the target quality score.
+
+Because red and white wines exhibit different chemical behavior, as illustrated by
+their distinct distributions and correlations (see summary visuals provided in
+the project slides), the two datasets were analyzed independently. This separation
+ensures that models learn feature–quality relationships specific to each wine type.
+
+\section{Data Processing and Pre–Modelling Steps}
+
+All modelling experiments followed a 70/30 train–test split, as recommended for predictive
+regression tasks with moderate data sizes. The split ensures that models are evaluated on
+samples not used during training, providing an unbiased estimate of predictive performance.
+
+Features were kept on their original scales for baseline experiments. For certain nonlinear
+learning algorithms, scaling was optionally applied during secondary experiments to check
+for improvements in performance. Visual inspection of correlations highlighted that alcohol
+content had the strongest positive linear association with quality, while other features
+showed moderate or weak relationships. This suggested the need for multivariate models
+capable of capturing nonlinear interactions.
+
+\section{Models and Algorithms}
+
+Three primary machine learning models were implemented, consistent with the project’s
+aim of comparing both linear and nonlinear predictive methods:
+
+\begin{itemize}
+    \item \textbf{Linear Regression} — Provides a baseline model to capture linear
+    relationships between features and quality. It serves as a reference point for
+    evaluating the necessity of more expressive models.
+
+    \item \textbf{K-Nearest Neighbors (KNN)} — A distance–based method suitable for
+    detecting local structure and nonlinear feature interactions. KNN’s sensitivity
+    to feature scaling was noted and considered during experiments.
+
+    \item \textbf{Random Forest} — An ensemble model that aggregates multiple
+    decision trees to learn nonlinear patterns and interactions. Random Forest
+    is robust to outliers and multicollinearity, making it suitable for complex
+    chemical datasets.
+\end{itemize}
+
+While not originally listed as one of the core models, Support Vector Machines (SVM)
+were also explored during analysis, as indicated in the results slides. SVM achieved the best
+performance for red wines, highlighting the importance of nonlinear decision boundaries.
+
+\section{Tools and Technologies}
+
+The following Python libraries were used to implement the methodology:
+
+\begin{itemize}
+    \item \textbf{Pandas / NumPy}: Data loading, cleaning, preprocessing, and aggregation.
+    \item \textbf{Matplotlib / Seaborn}: Visualization of distributions, box plots,
+    correlation matrices, and exploratory patterns used to guide modelling decisions.
+    \item \textbf{Scikit–learn}: Model training, evaluation, and performance metrics
+    (RMSE and \(R^2\)). Also used for splitting datasets and optional feature scaling.
+\end{itemize}
+
+The tooling supports reproducible and transparent data science workflows, aligning with
+standard methodological expectations for predictive modelling tasks.
+
+\section{Experimental Design}
+
+Experiments were designed to benchmark the performance of each model on red and white
+wine datasets separately. The evaluation relied on two common regression metrics:
+
+\begin{itemize}
+    \item Root Mean Squared Error (RMSE), which penalizes large errors more heavily,
+    and thus measures prediction reliability.
+    \item \(R^2\), which quantifies the proportion of variance in wine quality
+    explained by the model.
+\end{itemize}
+
+By comparing metrics across models, the methodology enabled assessment of whether
+nonlinear approaches significantly outperform linear baselines. Model performance
+differences between red and white wine datasets were also examined, providing insight into
+whether distinct chemical profiles demand different predictive strategies.
+
+\section{Summary}
+
+This chapter has detailed the methodological components of the project, including data
+preparation, modelling techniques, tool usage, and experimental design. The chosen
+methodology supports a structured, objective investigation into the feasibility of predicting
+wine quality from physicochemical features, ensuring reproducibility and alignment with
+best practices in applied machine learning research.
+
+
+
