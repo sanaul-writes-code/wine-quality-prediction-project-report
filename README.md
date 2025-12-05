@@ -1,4 +1,5 @@
 # Software
+
 You will need to use OverLeaf or other LaTex editior.
 
 1. Create a free account on OverLeaf  
@@ -7,8 +8,18 @@ You will need to use OverLeaf or other LaTex editior.
 4. You can now view the current state of the project report and make changes
 
 # Contributing Guidelines
+
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature-xyz`)
 3. Commit your changes (`git commit -m "Add feature xyz"`)
 4. Push to your branch (`git push origin feature-xyz`)
 5. Open a Pull Request
+
+# Completed Chapters
+
+- [x] chapters/01_introduction
+- [x] chapters/02_literature
+- [ ] chapters/03_methodology
+- [ ] chapters/04_results
+- [ ] chapters/05_discussion
+- [ ] chapters/06_conclusions (In progress...)
